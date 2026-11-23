@@ -14,12 +14,12 @@
 # rabbitmq_password: "{{ lookup('amazon.aws.aws_secret', 'roboshop/dev/ansible', region='us-east-1') | from_json | json_query('rabbitmq_password')  }}"
 # shipping_db_user: "{{ lookup('amazon.aws.aws_secret', 'roboshop/dev/ansible', region='us-east-1') | from_json | json_query('shipping_db_user')  }}"
 # shipping_db_password: "{{ lookup('amazon.aws.aws_secret', 'roboshop/dev/ansible', region='us-east-1') | from_json | json_query('shipping_db_password')  }}"
-mongodb_host: mongodb.daws92s.shop
-redis_host: redis.daws92s.shop
-mysql_host: mysql.daws92s.shop
-rabbitmq_host: rabbitmq.daws92s.shop
-catalogue_host: catalogue.daws92s.shop
-user_host: user.daws92s.shop
-cart_host: cart.daws92s.shop
-shipping_host: shipping.daws92s.shop
-payment_host: payment.daws92s.shop
+mongodb_host: mongodb-{{env}}.daws92s.shop
+redis_host: redis-{{env}}.daws92s.shop
+mysql_host: mysql-{{env}}.daws92s.shop
+rabbitmq_host: rabbitmq-{{env}}.daws92s.shop
+catalogue_host: catalogue-{{env}}.daws92s.shop
+user_host: user-{{env}}.daws92s.shop
+cart_host: cart-{{env}}.daws92s.shop
+shipping_host: shipping-{{env}}.daws92s.shop
+payment_host: payment-{{env}}.daws92s.shop
