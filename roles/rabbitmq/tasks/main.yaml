@@ -15,7 +15,7 @@
     name: rabbitmq-server
     state: started
     enabled: yes
-    
+
 - name: Install boto3 and botocore via pip
   ansible.builtin.pip:
     name:
